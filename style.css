@@ -8,6 +8,14 @@
     --font-color: #000;
     --blue-solid: #a1dbed;
     --green-solid: #d4eda1;
+    --bg-graydark: #2c3e50;
+    --font-colordark: #fff;
+    --darkmodeblue: #134c78;
+    --darkmodegreen: #5b7428;
+    --darkmodered: #ad4242;
+    --darkmodeyellow: #918627;
+    --bluedark: rgb(24, 110, 147);
+    --greendark: rgb(66, 120, 66);
   }
 
 * {
@@ -21,6 +29,8 @@ body {
     margin-bottom: 0px;
     height: 100vh;
     width: 100vw;  
+    background-color: var(--bg-gray);
+    color: var(--font-color);
 } 
 
 h2 {
@@ -271,6 +281,94 @@ main {
 
 .arrow-button-right:hover {
     background-color: rgb(24, 110, 147);
+}
+
+@media (prefers-color-scheme: dark ){
+    body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        height: 100vh;
+        width: 100vw;
+        background-color: var(--bg-graydark);
+        color: var(--font-colordark);
+    }
+    
+    h2 {
+        font-size: 24px;
+        font-weight: 800;
+        color: var(--font-colordark);
+    }
+    
+    p {
+        font-size: 11px;
+        color: var(--font-colordark);
+    }
+
+    .arrow-button-right {
+        background-color: var(--bluedark);
+    }
+
+    .arrow-button-right:hover {
+        background-color: var(--blue-solid);
+    }
+
+    .arrow-button-rightyellow {
+        background-color: var(--greendark);
+    }
+
+    .arrow-button-rightyellow:hover {
+        background-color: var(--green-solid);
+    }
+
+    .container .left .card {
+        background-color: #537597;
+        box-shadow: -4px 6px 20px 1px #13171a;
+    }
+
+    .buttonarrow {
+        box-shadow: -4px 6px 20px 1px #13171a;
+        background-color: var(--darkmodered);
+    }
+
+    .tagbox .gothenburg {
+        background-color: var(--darkmodeyellow);
+    }
+
+    .tagbox .money {
+        background-color: var(--darkmodered);
+    }
+
+    .tagbox .animals {
+        background-color: var(--darkmodegreen);
+    }
+
+    .tagbox .office {
+        background-color: var(--darkmodeblue);
+    }
+
+    .tagbox .jobs {
+        background-color: var(--darkmodegreen);
+    }
+
+    .buttonblue {
+        background-color: var(--darkmodeblue);
+    }
+
+    .buttonyellow {
+        background-color: var(--darkmodegreen);
+    }
+
+    nav h2 a {
+        color: var(--font-colordark);
+    }
+
+    .container .right h1:hover {
+    transform: scale(1.2);
+    transition-duration: 0.2s;
+    color: var(--font-colordark);
+    }
 }
 
 @media (max-width: 900px) {
